@@ -11,7 +11,7 @@ with g.as_default():
            name='x2')
 
    ## calculate the sum of each column, Summe der Spalten berechnen
-   xsum = tf.reduce_max(x2, axis=0, name='col_sum')
+   xsum = tf.reduce_mean(x2, axis=0, name='col_sum')
 
    ## calculate the mean of each column, Mittelwerte der Spalten berechnen
    xmean = tf.reduce_mean(x2, axis=0, name='col_mean')
