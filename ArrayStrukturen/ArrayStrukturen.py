@@ -10,8 +10,8 @@ with g.as_default():
    x2 = tf.reshape(x, shape=(-1, 8),
            name='x2')
 
-   ## calculate the sum of each column, Summe der Spalten berechnen
-   xsum = tf.reduce_mean(x2, axis=0, name='col_sum')
+   ## calculate the mean of each column, minimaler Wert einer Spalte
+   xsum = tf.reduce_min(x2, axis=0, name='col_sum')
 
    ## calculate the mean of each column, Mittelwerte der Spalten berechnen
    xmean = tf.reduce_mean(x2, axis=0, name='col_mean')
